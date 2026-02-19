@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moblist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Mobname
+            </th>
+            <th>
+                Mobhealth
+            </th>
+            <th>
+                Mobspeed
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="m : ${mob}">
+                <td th:text="${m.mobName}"></td>
+                <td th:text="${m.mobHealth}"></td>
+                <td th:text="${m.mobSpeed}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/mob/add">New Mob</a>
+    <a href="/mob/delete">Remove Mob</a>
+</body>
+</html>

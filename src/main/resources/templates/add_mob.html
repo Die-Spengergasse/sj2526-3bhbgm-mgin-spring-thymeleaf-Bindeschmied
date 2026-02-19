@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <form th:action="@{/mob/add}" th:object="${mob}" method="post">
+        <input type="text" th:field="*{mobName}" class="form-control" placeholder="MobName">
+        <input type="number" th:field="*{mobHealth}" class="form-control" placeholder="MobHealth">
+        <input type="number" th:field="*{mobSpeed}" class="form-control" placeholder="MobSpeed">
+        <input type="submit" class="form-control" value="Save">
+    </form>
+</body>
+</html>
