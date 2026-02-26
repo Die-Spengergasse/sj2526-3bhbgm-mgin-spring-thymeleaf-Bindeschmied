@@ -38,4 +38,12 @@ public class Mobs {
     public void setMobSpeed(float mobspeed) {
         this.mobSpeed = mobspeed;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

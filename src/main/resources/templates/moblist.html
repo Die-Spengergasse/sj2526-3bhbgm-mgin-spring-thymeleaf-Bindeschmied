@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
+    <button><a href="http://localhost:8080">Home</a></button>
     <table class="table">
         <thead>
         <tr>
@@ -21,10 +22,12 @@
         </tr>
         </thead>
         <tbody>
-            <tr th:each="m : ${mob}">
+            <tr th:each="m : ${mob}"> <!-- gibt alle mobs aus -->
                 <td th:text="${m.mobName}"></td>
                 <td th:text="${m.mobHealth}"></td>
                 <td th:text="${m.mobSpeed}"></td>
+                <td><a th:href="@{/mob/edit(id=${m.id})}">Edit Mob</a></td> <!-- nimmt den Mob der zum ändern ist -->
+                <td><a th:href="@{/mob/delete(id=${m.id})}">delete Mob</a></td> <!-- nimmt den Mob der zum löschen ist -->
             </tr>
         </tbody>
     </table>
